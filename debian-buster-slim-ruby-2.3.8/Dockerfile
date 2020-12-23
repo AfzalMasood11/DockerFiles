@@ -1,5 +1,5 @@
 # Using slim-stretch image for small size
-FROM afzalmasood11/debian-buster-slim:1.0.0
+FROM afzalmasood11/debian-buster-slim-nginx:1.18.0
 
 LABEL maintainer="Afzal Masood <afzal.masood@coeus-solutions.de>"
 
