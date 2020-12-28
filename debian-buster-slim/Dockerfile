@@ -5,13 +5,8 @@ LABEL maintainer="Afzal Masood <afzal.masood@coeus-solutions.de>"
 
 RUN apt-get update && \
   apt-get upgrade -y && \
-  apt-get install -y --no-install-recommends ca-certificates curl netbase wget && \
-  apt-get install -y --no-install-recommends gnupg dirmngr && \
-  rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update && \
-  apt-get upgrade -y && \
-  apt-get install -y --no-install-recommends bzr git mercurial openssh-client subversion procps && \
+  apt-get install -y --no-install-recommends ca-certificates curl netbase wget \
+  		bzr git mercurial openssh-client procps gnupg dirmngr && \
   rm -rf /var/lib/apt/lists/*
 
 RUN set -ex; \
