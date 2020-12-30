@@ -5,8 +5,8 @@ LABEL maintainer="Afzal Masood <afzal.masood@coeus-solutions.de>"
 
 RUN apt-get update && \
   apt-get upgrade -y && \
-  apt-get install -y --no-install-recommends ca-certificates curl netbase wget \
-  		bzr git mercurial openssh-client procps gnupg dirmngr && \
+  apt-get install -y --no-install-recommends ca-certificates curl wget gnupg netbase \
+  		git openssh-client && \
   rm -rf /var/lib/apt/lists/*
 
 RUN set -ex; \
@@ -15,23 +15,19 @@ RUN set -ex; \
 	apt-get install -y --no-install-recommends \
 		autoconf \
 		automake \
+		imagemagick \
+		g++ \
+		libxml2-dev \
+		libxslt-dev \
+		libpq-dev \
 		bzip2 \
 		dpkg-dev \
-		file \
-		g++ \
 		gcc \
-		imagemagick \
 		libcurl4-openssl-dev \
 		libdb-dev \
-		libmagickcore-dev \
-		libmagickwand-dev \
-		libpq-dev \
 		libssl-dev \
 		libtool \
 		libwebp-dev \
-		libxml2-dev \
-		libxslt-dev \
-		libsqlite3-dev \
 		libyaml-dev \
 		unzip \
 		xz-utils \
