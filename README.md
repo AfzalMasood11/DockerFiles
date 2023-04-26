@@ -11,3 +11,6 @@ e.g: docker tag 34f3cd0048ee afzalmasood11/debian-bullseye-slim-ruby:2.3.8
 docker push <hub-user>/<repo-name>:<tag>
 
 e.g: docker push afzalmasood11/debian-bullseye-slim-ruby:2.3.8
+
+##Note:
+Sometimes update did not reflect in your project if you don't update the tag or name, so after update try to update the tag atleast.
