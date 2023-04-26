@@ -1,7 +1,7 @@
 # Using slim-stretch image for small size
 FROM afzalmasood11/debian-bullseye-slim:latest
 
-LABEL maintainer="Afzal Masood <afzal.masood@coeus-solutions.de>"
+LABEL maintainer="Afzal Masood <afzal.masood@coeus-solutions.com>"
 
 # skip installing gem documentation
 RUN mkdir -p /usr/local/etc \
@@ -27,7 +27,7 @@ RUN set -ex \
 		libssl1.0-dev \
 		ruby \
 	" \
-	&& echo "deb http://deb.debian.org/debian stretch main" > /etc/apt/sources.list.d/stretch.list \
+	&& echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list.d/stretch.list \
 	&& apt-get update \
 	&& apt-get upgrade -y \
 	&& apt-get install -y --no-install-recommends libssl1.0.2 libreadline-dev $buildDeps \
